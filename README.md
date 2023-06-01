@@ -9,9 +9,9 @@ Como determinar os tipos de cada objeto?
 type or interface são os metodos usados para tipar e sua estrutura é:
 
 inferface objetoType {
-    item1: number,
-    item2: string,
-    item3obrigatório?: boolean, 
+item1: number,
+item2: string,
+item3obrigatório?: boolean,
 }
 
 Dentro de uma função ele é inserido assim:
@@ -33,3 +33,5 @@ Fiz o primeiro Hello world em typescript e usei o comando npx tsc src/index.ts p
 
 Depois exclui o js e mudei para rodar o node em ts, com um ajuste no package.json onde tem que rodar o tsx --watch com o caminho para funcionar.
 
+🗃️ Install: npm i eslint @rocketseat/eslint-config -D
+🗂️ Package.json: "lint": "eslint src --ext .ts --fix"
