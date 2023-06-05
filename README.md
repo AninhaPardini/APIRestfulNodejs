@@ -66,6 +66,25 @@ Dentro do documento criado de migration, existe duas funções, o up, que signif
 
 ### Acessando o banco de dados
 
-Para acessar dentro do index, tenho que chamar dentro de uma variante, com a mesma forma que fiz no migration.
+Para acessar dentro do index como GET, tenho que chamar dentro de uma variante, com a mesma forma que fiz no migration.
 
+Para procurar na tabela:
 await knex('nome da tabela').onde('nome do campo', valor).selecionar('')
+
+Para inserir na tabela:
+await knex('transactions').insert({
+id: crypto.randomUUID(),
+title: '',
+amount: valor,
+})
+
+## Variáveis de ambiente
+
+Utilizamosw o dotenv para amazenar informações sensíveis e criei um .env.example para treinar a boa contuda de código deixando uma base para se eu tivesse um companheiro de equipe.
+
+### Tratando com zod as variáveis (validação de dados)
+
+Para evitar a poluição de código com os ifs, usarei o zod que é uma biblioteca para testar as keys.
+
+💡 Schema é formato que serão recebidos de dados das váriaveis de ambiente
+💡 Parse: pega os dados de uma variante e faz a validação com o zod se bate com o que foi dado como parâmetro. Neste caso ele pega o envSchema e usa como base para validar o process.env

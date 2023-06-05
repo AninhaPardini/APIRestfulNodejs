@@ -1,6 +1,7 @@
 import fastify from 'fastify'
 import { knex } from './database'
 import crypto from 'crypto'
+import { env } from './env'
 
 const app = fastify()
 
@@ -14,7 +15,7 @@ app.get('/hello', async () => {
 
 app
   .listen({
-    port: 3000, // Promisse
+    port: env.PORT, // Promisse
   })
   .then(() => {
     // Quando terminar de executar a promisse:
