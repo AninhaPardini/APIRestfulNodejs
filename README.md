@@ -130,3 +130,4 @@ Essa configuração é para melhorar o Knex dentro do typescript e é uma boa co
 
 ## Listagem de transações
 
+Defini para que o get buscasse todas as transações e também um apenas para buscar um transação com id específico usando zod.
