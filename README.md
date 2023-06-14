@@ -8,14 +8,14 @@ São o escopo do projeto, no que ele se baseia, suas funcionalidades ou não, as
 
 ### Requisitos funcionais
 
-[ ] O usuário deve poder criar uma nova transação;
+[x] O usuário deve poder criar uma nova transação;
 [ ] O usuário deve poder obter um resumo da sua conta;
-[ ] O usuário deve poder listar todas as transações que já ocorreram;
-[ ] O usuário deve poder visualizar uma transação única;
+[x] O usuário deve poder listar todas as transações que já ocorreram;
+[x] O usuário deve poder visualizar uma transação única;
 
 ### Regras de Negócio
 
-[ ] A transação pode ser do tipo crédito que somará ao valor total, ou débito que subtrairá;
+[x] A transação pode ser do tipo crédito que somará ao valor total, ou débito que subtrairá;
 [ ] Deve ser possível identificarmos o usuário entre as requisições;
 [ ] O usuário só pode visualizar transações o qual ele criou;
 
@@ -62,6 +62,14 @@ Depois exclui o js e mudei para rodar o node em ts, com um ajuste no package.jso
 O puglin precisa ser uma função assincrona e para conectar ele ao server é só usar app.register('nome_da_função').
 
 A como criar prefixos também para facilitar o código para todos os pós / serão de transactions.
+
+## Cookies no Fastify
+
+É uma forma e manter o contexto entre requisições.
+
+no path, a rota colocada será a que poerá acessar os cookies, então quando está só /, quer dizer que qualquer rota pode acessar os cookies.
+
+⬇️Install: npm i @fastify/cookie
 
 ## Instalando [knex](https://knexjs.org/guide/#node-js)
 
@@ -131,3 +139,6 @@ Essa configuração é para melhorar o Knex dentro do typescript e é uma boa co
 ## Listagem de transações
 
 Defini para que o get buscasse todas as transações e também um apenas para buscar um transação com id específico usando zod.
+
+para ver a soma de um campo de números, neste caso o amount, a função sum é empregada e tem como configura-lá para dar um titúlo ao resultado usando o "as".
+
