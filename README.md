@@ -29,17 +29,17 @@ Como determinar os tipos de cada objeto?
 
 type or interface são os metodos usados para tipar e sua estrutura é:
 
-inferface objetoType {
-item1: number,
-item2: string,
-item3obrigatório?: boolean,
-}
+    inferface objetoType {
+        item1: number,
+        item2: string,
+        item3obrigatório?: boolean,
+    }
 
 Dentro de uma função ele é inserido assim:
 
-function example(objeto: objetoType) {
+    function example(objeto: objetoType) {
 
-}
+    }
 
 📥 Install: npm i -D typescript
 📥 Install: npm i -D tsx
@@ -59,6 +59,10 @@ Depois exclui o js e mudei para rodar o node em ts, com um ajuste no package.jso
 
 ### Plugins do Fastify
 
+O puglin precisa ser uma função assincrona e para conectar ele ao server é só usar app.register('nome_da_função').
+
+A como criar prefixos também para facilitar o código para todos os pós / serão de transactions.
+
 ## Instalando [knex](https://knexjs.org/guide/#node-js)
 
 🗃️ Install: npm i knex sqlite3
@@ -74,7 +78,7 @@ Além do git, o mais recomendado para gerenciamento de versões em nodejs / knex
 3 - package.json: em script adicionar "knex": "node --loader tsx ./node_modules/.bin/knex"
 4 - 🗃️ Create migrate: npm run knex -- migrate:make create-documents
 
-    Para poder ter acesso as interfaces e estruturas de config do migrate, tive que exportar em database o Knex, e defini o migrations para ts e sua pasta de criação.
+Para poder ter acesso as interfaces e estruturas de config do migrate, tive que exportar em database o Knex, e defini o migrations para ts e sua pasta de criação.
 
 Dentro do documento criado de migration, existe duas funções, o up, que significa o que aquela versão irá fazer, e o down se der caquinha em alguma coisa e ele irá fazer o contrário do que o método up fez. Exemplo:
 
@@ -111,3 +115,18 @@ Para evitar a poluição de código com os ifs, usarei o zod que é uma bibliote
 
 💡 Schema é formato que serão recebidos de dados das váriaveis de ambiente
 💡 Parse: pega os dados de uma variante e faz a validação com o zod se bate com o que foi dado como parâmetro. Neste caso ele pega o envSchema e usa como base para validar o process.env
+
+## Criação de transações
+
+request.body = todo o corpo da página HTTP e server pra criar ou editar algum recurso.
+
+💡 Facilitando: Uma forma de converter de forma mais facil quando for credito ou debito uma transação, quando a opção selecionada for débito, irá fazer uma multiplicação de -1 para transforma-lo em negativo.
+
+## Tipagens no Knex
+
+Essa configuração é para melhorar o Knex dentro do typescript e é uma boa conduta para identificar os tipos de objetos de uma transação.
+
+💡 Um arquivo de tipagem é preciso adicionar o ".d" de definitions na frente do ".ts".
+
+## Listagem de transações
+
