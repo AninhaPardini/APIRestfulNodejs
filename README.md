@@ -71,11 +71,21 @@ no path, a rota colocada será a que poerá acessar os cookies, então quando es
 
 ⬇️Install: npm i @fastify/cookie
 
+## Criando Middlers e definindo uma pré Handler
+
+É importante criar intercepitadores que fazem checagem do algum requisito para poder puxar alguma requisição, neste caso é a checagem se há sessionId(cookie) na procura de transições, com isto separei a checagem num arquivo e exportei a função como preHandler em array dentro de cada metódo.
+
 ## Instalando [knex](https://knexjs.org/guide/#node-js)
 
 🗃️ Install: npm i knex sqlite3
 
 Para poder utilizar o knex, fiz um arquivo database onde ele irá tratar os dados e enviar ao arquivo app.db e no index fiz o push da resposta com os dados do arquivo, que a princípio retornou um array vazio.
+
+## Tipagens no Knex
+
+Essa configuração é para melhorar o Knex dentro do typescript e é uma boa conduta para identificar os tipos de objetos de uma transação.
+
+💡 Um arquivo de tipagem é preciso adicionar o ".d" de definitions na frente do ".ts".
 
 ### Criando migrate
 
@@ -129,12 +139,6 @@ Para evitar a poluição de código com os ifs, usarei o zod que é uma bibliote
 request.body = todo o corpo da página HTTP e server pra criar ou editar algum recurso.
 
 💡 Facilitando: Uma forma de converter de forma mais facil quando for credito ou debito uma transação, quando a opção selecionada for débito, irá fazer uma multiplicação de -1 para transforma-lo em negativo.
-
-## Tipagens no Knex
-
-Essa configuração é para melhorar o Knex dentro do typescript e é uma boa conduta para identificar os tipos de objetos de uma transação.
-
-💡 Um arquivo de tipagem é preciso adicionar o ".d" de definitions na frente do ".ts".
 
 ## Listagem de transações
 
