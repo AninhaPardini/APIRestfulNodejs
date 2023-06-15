@@ -171,3 +171,11 @@ O usado neste projeto é o [Vitest](https://vitest.dev/) e para utilizar ele e a
 Para rodar os testes com melhor performace sem precisar lançar o server no ar é usado o supertest como depêndencia.
 
 ⬇️ npm i supertest -D
+⬇️ npm i -D @types/supertest
+
+Dentro dos testes tem as separações de quando quero que o teste execute:
+
+ - beforeAll: Antes de todos os códigos rodarem
+ - beforeEach: Antes de cada um
+ - afterAll: Depois de todos
+ - afterEach: Depois de cada um
