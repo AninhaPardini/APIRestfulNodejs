@@ -150,3 +150,24 @@ Defini para que o get buscasse todas as transações e também um apenas para bu
 
 para ver a soma de um campo de números, neste caso o amount, a função sum é empregada e tem como configura-lá para dar um titúlo ao resultado usando o "as".
 
+## Automatizando com teste
+
+### Tipos de testes
+
+- Unitários: unidade da aplicação, uma pequena parte de forma totalmente isolada~, tipo de teste mais utilizado;
+- Integração: comunicação entre duas ou mais unidades;
+- E2E Ponta a ponta: simulam um usuário operando na nossa aplicação;
+    - e2e front-end: abre a página de login, digita o texto no campo com ID email, clique no botão
+    - e2e back-end: chamados HTTP, websockets
+
+💡 Entender a piramide de teste
+
+O usado neste projeto é o [Vitest](https://vitest.dev/) e para utilizar ele e a maioria dos frameworks de teste, se intala e cria uma pasta para os arquivos de teste.
+
+🧪 Para iniciar o teste é: npx vitest
+⌨️ "A" para rodar todos os testes novamente
+🔁 No package mudou para npm test
+
+Para rodar os testes com melhor performace sem precisar lançar o server no ar é usado o supertest como depêndencia.
+
+⬇️ npm i supertest -D
