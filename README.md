@@ -179,3 +179,5 @@ Dentro dos testes tem as separações de quando quero que o teste execute:
  - beforeEach: Antes de cada um
  - afterAll: Depois de todos
  - afterEach: Depois de cada um
+
+ 💡 Categorizando os testes: basta usar describe e colocar o código de teste abaixo.
