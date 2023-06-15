@@ -63,6 +63,10 @@ O puglin precisa ser uma função assincrona e para conectar ele ao server é s�
 
 A como criar prefixos também para facilitar o código para todos os pós / serão de transactions.
 
+### Plugins Globais
+
+Cada plugin tem seu contexto própio ou seja, tudo que tem dentro de um plugin não interfere em outro e vise versa. Com isso é usado o hook podemos globalizar.
+
 ## Cookies no Fastify
 
 É uma forma e manter o contexto entre requisições.
