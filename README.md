@@ -188,6 +188,7 @@ Dentro dos testes tem as separações de quando quero que o teste execute:
 
  ## Deploy
 
- Primeiro instalo o [tsup](https://www.npmjs.com/package/tsup) que ajuda a trabalhar o typescript para js para que possa intergir com as ferramentas de deploy.
+ Primeiro instalo o [tsup](https://www.npmjs.com/package/tsup) que ajuda a trabalhar o typescript para js para que possa intergir com as ferramentas de deploy utilizando por baixos dos panos esbuild.
 
  ⬇️ npm i tsup -D
+
