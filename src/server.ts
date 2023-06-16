@@ -7,5 +7,5 @@ app
   })
   .then(() => {
     // Quando terminar de executar a promisse:
-    console.log('Ta funcionando carai!')
+    console.log('HTTP Server Running!')
   })
