@@ -131,6 +131,10 @@ amount: valor,
 
 Utilizamosw o dotenv para amazenar informações sensíveis e criei um .env.example para treinar a boa contuda de código deixando uma base para se eu tivesse um companheiro de equipe.
 
+### Variável teste
+
+Criei um .env.test e exemplo, o vite já cria um variável chamada test, então em index.js no env, eu desestruturo o dotenv/config para ele buscar as configurações, e passo um if que se caso rodar o vitest ele muda pra test, se não fica na padrão.
+
 ### Tratando com zod as variáveis (validação de dados)
 
 Para evitar a poluição de código com os ifs, usarei o zod que é uma biblioteca para testar as keys.
@@ -181,3 +185,9 @@ Dentro dos testes tem as separações de quando quero que o teste execute:
  - afterEach: Depois de cada um
 
  💡 Categorizando os testes: basta usar describe e colocar o código de teste abaixo.
+
+ ## Deploy
+
+ Primeiro instalo o [tsup](https://www.npmjs.com/package/tsup) que ajuda a trabalhar o typescript para js para que possa intergir com as ferramentas de deploy.
+
+ ⬇️ npm i tsup -D
